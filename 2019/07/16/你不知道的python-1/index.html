@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    你不知道的python(1) | EASY
+  </title>
+  <meta name="description" content="𝑰 𝒍𝒐𝒗𝒆 𝒖 𝒕𝒉𝒓𝒆𝒆 𝒕𝒉𝒐𝒖𝒔𝒂𝒏𝒅.">
+  
+  <meta name="keywords" content="
+  python
+  ">
+  
+  <meta name="author" content="Huangxiaohen">
+
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+  
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+</head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">This website</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/archives">Archives</a></li>
+        
+        
+        <li><a href="/categories">Categories</a></li>
+        
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        
+        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="/uploads/head.jpeg"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/archives"
+           class="header-toolbar-right"> 2 </a>
+      </li>
+      <li>
+        <a href="/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/tags"
+           class="header-toolbar-right"> 2 </a>
+      </li>
+      <li>
+        <a href="/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/categories"
+           class="header-toolbar-right"> 0 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/">EASY</a>
+      
+      
+    </h2>
+  </div>
+
+  <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div>
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    Huangxiaohen
+
+    <span class="post-date float-right" title="{{moment(1563283340000).format('MMM DD, YYYY, h:mm:ss A')}}">
+      <i class="fa fa-pencil-square-o"></i>
+      {{moment(1563283340000).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>你不知道的python(1)</h1>
+    <h2 id="Python-3-5-前后字典发生的变化"><a href="#Python-3-5-前后字典发生的变化" class="headerlink" title="Python 3.5 前后字典发生的变化"></a>Python 3.5 前后字典发生的变化</h2><h4 id="python3-5之前-包括python2-如果想要字典保持插入时候的顺序（key顺序）-必须要使用OrderedDict-即"><a href="#python3-5之前-包括python2-如果想要字典保持插入时候的顺序（key顺序）-必须要使用OrderedDict-即" class="headerlink" title="python3.5之前(包括python2) 如果想要字典保持插入时候的顺序（key顺序）, 必须要使用OrderedDict, 即"></a>python3.5之前(包括python2) 如果想要字典保持插入时候的顺序（key顺序）, 必须要使用OrderedDict, 即</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>o = OrderedDict()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>o[<span class="string">"a"</span>] = <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>o[<span class="string">"b"</span>] = <span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> k, v <span class="keyword">in</span> o.items():</span><br><span class="line"><span class="meta">... </span>  print(k, v)</span><br><span class="line">...</span><br><span class="line">(<span class="string">'a'</span>, <span class="number">1</span>)</span><br><span class="line">(<span class="string">'b'</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>但是，在python3.6以后，会发现，即使使用默认的字典，迭代的时候也会保持插入时候的顺序，这是怎么回事呢？<br>细心一点还会发现，在迭代的时候速度会更快(尤其是字典较大的时候更明显)，占用内存空间更小。</p>
+<p>如果你经常关注PEP的更新，会看到从python3.6起，参考pypy的字典实现，CPython修改了字典底层的实现，内存使用减少了20%到25%。<br>这对广大python使用者来说无疑是一个好消息，那么它又是如何实现的呢?</p>
+<p>我们先从python如何初始化一个字典来说起。</p>
+<h2 id="python3-6-之前"><a href="#python3-6-之前" class="headerlink" title="python3.6 之前!!!!!"></a>python3.6 之前!!!!!</h2><p>当我们初始化一个空字典的时候，CPython的底层会初始化一个8 * 3 的二维数组:<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example_dict = &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>大致是这样的<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[_, _, _] * 8] ( 字典初始的时候长度为8， 随着字典变大，会变成16, 32... )</span><br></pre></td></tr></table></figure></p>
+<p>当我们加入一条数据的时候 example_dict[“name”] = “a”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">会变成 [[_, _, _], [hash(&quot;name&quot;), 指向name的指针, 指向a的指针], .....]</span><br></pre></td></tr></table></figure>
+
+<p>为什么在index=1的地方插入数据呢？<br>因为 hash(“name”) % 8 = 1 (数组index，每台电脑得出的值是不一样的)</p>
+<p>这样初始化一个空字典大约需要8byte * 3 * 8 = 192byte</p>
+<hr>
+<h2 id="而在python3-6之后"><a href="#而在python3-6之后" class="headerlink" title="而在python3.6之后!!!!!!"></a>而在python3.6之后!!!!!!</h2><p>变成了:<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">    **只需要一个空数组 + 8个元素的一维数组**</span><br><span class="line"></span><br><span class="line">    indexes = [None] * 8  保存位置</span><br><span class="line">    entries = [] 保存值</span><br><span class="line"></span><br><span class="line">------------------------------------------------------ </span><br><span class="line">    当example_dict[&quot;name&quot;] = &quot;a&quot;以后，</span><br><span class="line">    indexs = [None, 0, None, .....] 0代表插入字典的顺序</span><br><span class="line">    entries = [[hash(&quot;name&quot;), 指向name的指针，指向a的指针]]</span><br><span class="line"></span><br><span class="line">------------------------------------------------------</span><br><span class="line"></span><br><span class="line">    当example_dict[&quot;title&quot;] = &quot;t&quot;</span><br><span class="line">    indexs = [None, 0, None, None, 1, None, None, None]  (因为hash(&quot;title&quot;) % 8 = 4)</span><br><span class="line">    entries = [[hash(&quot;name&quot;), *name, *a], [hash(&quot;title&quot;), *title, *t]] (*代表指针)</span><br></pre></td></tr></table></figure></p>
+<h4 id="当一个长度为2的字典，现在只需要8byte-indexs-8-3-2-56byte"><a href="#当一个长度为2的字典，现在只需要8byte-indexs-8-3-2-56byte" class="headerlink" title="当一个长度为2的字典，现在只需要8byte(indexs) + 8 * 3 * 2 = 56byte"></a>当一个长度为2的字典，现在只需要8byte(indexs) + 8 * 3 * 2 = 56byte</h4><h4 id="而在3-6之前-仍然需要-3-8-8-192byte-减少了70"><a href="#而在3-6之前-仍然需要-3-8-8-192byte-减少了70" class="headerlink" title="而在3.6之前, 仍然需要 3* 8 * 8 = 192byte, 减少了70%"></a>而在3.6之前, 仍然需要 3* 8 * 8 = 192byte, 减少了70%</h4><h4 id="并且因为index可以记录插入的顺序，所以现在的字典可以保证插入字典的先后顺序-即实现了orderedDict的功能"><a href="#并且因为index可以记录插入的顺序，所以现在的字典可以保证插入字典的先后顺序-即实现了orderedDict的功能" class="headerlink" title="并且因为index可以记录插入的顺序，所以现在的字典可以保证插入字典的先后顺序(即实现了orderedDict的功能)"></a>并且因为index可以记录插入的顺序，所以现在的字典可以保证插入字典的先后顺序(即实现了orderedDict的功能)</h4>
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="https://hello-world.huangxiaohen.win" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2019 Huangxiaohen</li>
+      <li><a href="https://hello-world.huangxiaohen.win">Home</a></li>
+      
+      <li><a href="https://github.com/huangxiaohen2738">Github</a></li>
+      
+    </ul>
+    <div class="footer-theme-info">
+      Theme <a href="//github.com/sabrinaluo/hexo-theme-replica">Replica</a>
+      by <a href="//github.com/sabrinaluo">Hiitea</a> ❤ Powered by Hexo
+    </div>
+    </div>
+    
+  </footer>
+</div>
+
+
+
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>
